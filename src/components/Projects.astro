@@ -1,0 +1,60 @@
+---
+import Github from "../Icons/Github.astro";
+import HTML from "../Icons/HTML.astro";
+import CSS from "../Icons/CSS.astro";
+import JS from "../Icons/JS.astro";
+
+
+const TAGS = {
+    HTML: {
+        name: "HTML",
+        color: "bg-red-500",
+        icon: HTML
+    },
+
+    CSS: {
+        name: "CSS",
+        color: "bg-blue-500",
+        icon: CSS
+    },
+
+    JS: {
+        name: "JavaScript",
+        color: "bg-yellow-500",
+        icon: JS
+    },
+
+    
+    
+}
+
+const PROJECTS = [
+    {
+        title: "Multiplataforma de servicios de aprendizaje y entretenimiento",
+        description: 'Dedicado a la enseñanza de inglés y español, así como a la creación de contenido web e instalaciones de Softwares.',
+        link: "https://lordsevatarch.github.io/BaseWeb_beta/",
+        Github: "https://github.com/LordSevatarCh",
+        image: "/public/projects/svgl.webp",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JS],
+    }
+]
+---
+
+{
+    PROJECTS.map(({ image, title, description, tags}) => (
+        <article>
+         <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>   
+         <p class="text-lg mb-4 text-pretty">{description}</p>
+         <ul class="flex gap-x-2 flex-row mb-2">
+            {tags.map(tag => (
+                <li>
+                    <span class={`flex gap-x-2 rounded-full text-xs ${tag.color} py-1 px-2`}>
+                        <tag.icon class="size-4" ></tag.icon>{tag.name}
+                    </span>
+                </li>
+            ))}
+         </ul>
+         <img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Captura del proyecto ${image}`} />
+        </article>
+    ))
+}

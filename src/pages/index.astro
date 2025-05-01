@@ -1,0 +1,70 @@
+---
+import Badge from '../components/Badge.astro';
+import Social from '../components/Social.astro';
+import Welcome from '../components/Welcome.astro';
+import Github from '../Icons/Github.astro';
+import Container from '../components/Container.astro';
+import LinkedIn from '../Icons/LinkedIn.astro';
+import Layout from '../layouts/Layout.astro';
+import Mail from '../Icons/Mail.astro';
+import Experience from '../components/Experience.astro';
+import Briefcase from '../Icons/Briefcase.astro';
+import Code from '../Icons/Code.astro';
+import Projects from '../components/Projects.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout 
+  title="Porfolio de ch - Profesor y Gestor Institucional con 3 años de experiencia"
+  description="Contrata la mejor experiencia educativa"
+>
+	<main class="px-4">
+		<Container class="py-44 pb-32">
+			<img class="rounded-full size-12 mb-4" 
+            src="https://c4.wallpaperflare.com/wallpaper/867/224/979/space-marine-warhammer-warhammer-40-000-video-game-art-ultramarines-hd-wallpaper-preview.jpg" 
+            alt="ch photo"/>
+
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">Hey, Soy ChomboGames <div class="flex justify-center items-center"> <a href="https://lordsevatarch.github.io/EKEFESweb.github.io/" 
+				target="_blank" 
+				rel="noopener" 
+				class="flex justify-center items-center"><Badge>Gestor institucional educativo</Badge></a></div>
+			</h1>
+		    <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]"> <span> Mas de 3 años de experiencia impartiendo clases de inglés</span> y creador de contenido YouTube. 
+			<span class="text-yellow-200/90 "> Especializado en crear sitios web </span> e <span class="text-red-200/90"> instalador de softwares</span></h2>
+
+
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<Social href="/">
+					<LinkedIn class="w-9 h-6" />
+					LinkedIn
+				</Social>
+				<Social href="/">
+					<Github class="w-9 h-6" />
+					Github
+				</Social>
+				<Social href="203110027@utvam.edu.mx">
+					<Mail class="w-9 h-6" />
+					203110027@utvam.edu.mx
+				</Social>
+			</nav>
+					
+		</Container>
+
+		<Container id="experiencia">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 itmes-center">
+				Experiencia Laboral
+				<Briefcase class="size-7" />
+			</h2>
+			<Experience />
+		</Container>
+		<Container id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 itmes-center">
+				Proyectos
+				<Code class="size-7" />
+			</h2>
+			<Projects />
+		</Container>
+	</main>
+</Layout>

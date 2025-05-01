@@ -1,0 +1,39 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCIE = [
+  {
+    date: "Actualmente",
+    title: "Gestor Institucional Educativa Curricular",
+    description:
+      "Administrador enfocado en mejorar continuamente los planteles educativos. actualmente adquiriendo conocimientos en la gestion de proyectos y la administracion de recursos.",
+    link: "#",
+  },
+  {
+    date: "Agosto 2021",
+    title: "ELT (English Language Teaching)",
+    description:
+      "Contando con experiencia ofreciendo clases de inglés y creando materiales didactios, adaptandolos a las necesidades del estudiantado.",
+    link: "#",
+  },
+  {
+    date: "Autonomo",
+    title: "Desarrollador Web con conocimientos HTML, CSS y JavaScript",
+    description:
+      "Desarrollador de sitios web basados en el aprendizaje del idioma inglés, así reforzando conocimeintos y crear habilidades entre los interesados al programa.",
+    link: "#",
+  },
+];
+---
+
+
+<ol class="relative border-s border-gray-200 ml-3">      
+    {
+        EXPERIENCIE.map(experiencie =>(
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...experiencie} />
+        </li>
+        ))
+    }      
+</ol>
+
